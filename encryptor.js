@@ -8,18 +8,34 @@ function encryptor(str) {
     // console.log(englishAlphabet)
     // console.log(strArr)
 
-    for (let i = 0; i < strArr.length; i++) {
-        j = englishAlphabet.indexOf(strArr[i])
+    // for (let i = 0; i < strArr.length; i++) {
+    //     const j = englishAlphabet.indexOf(strArr[i])
+    //     if (j >= englishAlphabet.length - k) {
+    //         const f = (j + k) % englishAlphabet.length
+    //         strArr[i] = englishAlphabet[f]
+    //     }
+    //     else {
+    //         strArr[i] = englishAlphabet[j + k]
+    //     }
+    // } //end of for loop
+
+
+
+    strArr.map((char) => {
+
+        const j = englishAlphabet.indexOf(char)
         if (j >= englishAlphabet.length - k) {
-            f = (j + k) % englishAlphabet.length
-            strArr[i] = englishAlphabet[f]
+            const f = (j + k) % englishAlphabet.length
+            char = englishAlphabet[f]
+            console.log(englishAlphabet[f])
         }
         else {
-            strArr[i] = englishAlphabet[j + k]
+            char = englishAlphabet[j + k]
+            console.log(englishAlphabet[j + k])
         }
-    } //end of for loop
+    })
 
-    console.log(strArr)
+
 }
 str = "mvklahvjcnbwqvtutmfafkwiuagjkzmzwgf"
 
