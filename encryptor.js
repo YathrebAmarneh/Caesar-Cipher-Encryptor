@@ -19,24 +19,24 @@ function encryptor(str) {
     //     }
     // } //end of for loop
 
-
-
-    strArr.map((char) => {
+    const strArrMap = strArr.map((char) => {
 
         const j = englishAlphabet.indexOf(char)
         if (j >= englishAlphabet.length - k) {
             const f = (j + k) % englishAlphabet.length
             char = englishAlphabet[f]
-            console.log(englishAlphabet[f])
+            return char
         }
         else {
             char = englishAlphabet[j + k]
-            console.log(englishAlphabet[j + k])
+            return char
+            // return strArr
         }
+
+        // console.log(strArr)
     })
+    console.log(strArrMap)
 
-
-}
+}// end of function
 str = "mvklahvjcnbwqvtutmfafkwiuagjkzmzwgf"
-
 encryptor(str)
